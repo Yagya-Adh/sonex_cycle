@@ -11,6 +11,14 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+
+        sonex: {
+          prime: "#d53c32",
+          primeBackGround: "#0000000a",
+          cartBackGround: "#0000000a",
+          borderCol: "#0000001a",
+          blackBackGroundCol: "#0009",
+        },
       },
     },
   },
