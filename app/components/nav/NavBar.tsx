@@ -29,14 +29,14 @@ const NavBar = () => {
             <ul className="flex items-center font-sans px-6 font-sonexFamily tracking-tighter ms-5  justify-between p-1">
               <button
                 onClick={openNAVBOXFirst}
-                className="flex items-center text-xl font-bold ms-2 transition-all ease-in-out duration-500  py-5 hover:border-t-4 border-t border-transparent hover:border-t-sonex-prime"
+                className="flex items-center text-xl font-bold ms-2 transition-all ease-in-out duration-500  py-5 border-transparent border-t-4 hover:border-t-sonex-prime"
               >
                 SHOP
                 <PlusIcon className="text-black size-4" />
               </button>
               <button
                 onClick={openNAVBOXSecond}
-                className="flex items-center text-xl font-bold ms-2 transition-all ease-in-out duration-500  py-5 hover:border-t-4 border-t border-transparent hover:border-t-sonex-prime"
+                className="flex items-center text-xl font-bold ms-2 transition-all ease-in-out duration-500  py-5 border-transparent border-t-4 hover:border-t-sonex-prime"
               >
                 EXPLORE
                 <PlusIcon className="text-black size-4" />

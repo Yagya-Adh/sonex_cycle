@@ -2,7 +2,6 @@
 import { MinusIcon, PlusIcon } from "@heroicons/react/16/solid";
 import React, { useState } from "react";
 import Footer from "../components/footer/Footer";
-import NavBar from "../components/nav/NavBar";
 import data from "../../faq.json";
 
 interface IfaqDATA {
