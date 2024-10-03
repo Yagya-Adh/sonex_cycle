@@ -6,7 +6,6 @@ import NavBar from "../components/nav/NavBar";
 const page = () => {
   return (
     <>
-      <NavBar />
       EXPLORE
       <Footer />
     </>

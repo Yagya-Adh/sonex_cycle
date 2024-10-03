@@ -20,7 +20,6 @@ const page = () => {
   };
   return (
     <>
-      <NavBar />
       <div className="mx-auto max-w-screen-2xl items-center px-40 py-20 w-1/2">
         <h1 className="text-6xl font-extrabold font-sonexFamily tracking-tighter max-w-screen-xl">
           FREQUENTLY <br /> ASKED QUESTIONS

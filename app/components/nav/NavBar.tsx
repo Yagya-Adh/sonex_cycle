@@ -19,7 +19,7 @@ const NavBar = () => {
   };
   return (
     <>
-      <nav className="bg-sonex-primeBackGround border-b-sonex-borderCol">
+      <nav className="bg-white border-b-sonex-borderCol sticky top-0 z-20">
         <div className="max-w-screen-2xl mx-auto flex items-center justify-between border-b  px-10  w-full">
           <div className=" flex items-center justify-between  ">
             <div className="flex items-center justify-between">

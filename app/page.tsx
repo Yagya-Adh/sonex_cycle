@@ -8,7 +8,7 @@ import MainBanner from "./components/banner/MainBanner";
 export default function Home() {
   return (
     <>
-      <NavBar />
+      {/* <NavBar /> */}
       <MainBanner />
       <SectionHead
         sectionName="EXPLORE"
