@@ -7,6 +7,9 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    fontFamily: {
+      sonexFamily: ["Barlow Condensed", "sans-serif"],
+    },
     extend: {
       colors: {
         background: "var(--background)",
@@ -18,7 +21,10 @@ const config: Config = {
           cartBackGround: "#0000000a",
           borderCol: "#0000001a",
           blackBackGroundCol: "#0009",
+          footerFormBackGround: "#3256d5",
         },
+
+        // Barlow Condensed, sans-serif
       },
     },
   },
