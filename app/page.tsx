@@ -78,16 +78,6 @@ const data = [
   },
 ];
 
-const exploreData = [
-  { id: 1, exploreImage: downHill, name: "BIKE" },
-  { id: 2, exploreImage: brakeParts, name: "PARKS" },
-  { id: 3, exploreImage: gearImage, name: "GEAR" },
-  { id: 4, exploreImage: outLetImage, name: "OUTLET" },
-  { id: 5, exploreImage: serveiceImage, name: "SERVICES" },
-  { id: 6, exploreImage: blogImage, name: "BLOG" },
-  { id: 7, exploreImage: eventImage, name: "EVENTS" },
-];
-
 export default function Home() {
   return (
     <>
