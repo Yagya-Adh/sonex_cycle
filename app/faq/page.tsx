@@ -1,7 +1,6 @@
 "use client";
 import { MinusIcon, PlusIcon } from "@heroicons/react/16/solid";
 import React, { useState } from "react";
-import Footer from "../components/footer/Footer";
 import data from "../../faq.json";
 
 interface IfaqDATA {
@@ -54,7 +53,6 @@ const page = () => {
           ))}
         </div>
       </div>
-      <Footer />
     </>
   );
 };

@@ -3,13 +3,6 @@ import SectionHead from "./components/section/SectionHead";
 import Card from "./components/card/Card";
 import MainBanner from "./components/banner/MainBanner";
 import cycleC from "./assets/advertisehomeCycle.webp";
-import downHill from "./assets/explore/downhill.webp";
-import brakeParts from "./assets/explore/brakepart.webp";
-import gearImage from "./assets/explore/gear.webp";
-import outLetImage from "./assets/explore/outlet.webp";
-import serveiceImage from "./assets/explore/services.webp";
-import blogImage from "./assets/explore/blog.webp";
-import eventImage from "./assets/explore/events.webp";
 import ExploreSectionComponent from "./components/explore/ExploreSectionComponent";
 
 const data = [

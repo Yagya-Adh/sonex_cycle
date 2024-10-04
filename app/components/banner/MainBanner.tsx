@@ -8,7 +8,7 @@ const MainBanner = () => {
     <div className="relative mx-auto max-w-screen-2xl">
       <div className="absolute top-0">
         <h1 className="text-white text-8xl font-extrabold max-w-screen-sm font-sonexFamily p-10">
-          RISE WITH THE RIDING.
+          RISE WITH THE RIDING &#46;
         </h1>
       </div>
       <Image src={MAINBANNERIMAGE} alt="main_banner_" className="z-10" />
@@ -22,7 +22,7 @@ const BannerFootSection = () => {
     <div className="flex flex-col items-end w-full absolute bottom-0">
       <div className="flex justify-between items-end px-10">
         <p className="text-white text-3xl font-bold max-w-screen-sm pe-40">
-          YOUR SHOP FOR BICYCLES AND E-BIKES IN SWITZERLAND.
+          YOUR SHOP FOR BICYCLES AND E&#45;BIKES IN SWITZERLAND &#46;
         </p>
         <Card
           cycle={AVDERTISECYCLE}
