@@ -1,15 +1,20 @@
 "use client";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import aboutBannerImage from "../assets/about/about.webp";
 import ExploreSectionComponent from "../components/explore/ExploreSectionComponent";
 import exploreTextData from "../../explorePageTextData.json";
+import MainImageBanner from "../components/banner/MainImageBanner";
 
 const eventPageData = exploreTextData;
 
 const AboutPage = () => {
   return (
     <div className="max-w-screen-2xl mx-auto ">
-      <MainPageBanner pageName="ABOUT" pageSlug="NEXT STEP: ADVENTURE " />
+      <MainImageBanner
+        pageName="ABOUT"
+        pageSlug="NEXT STEP: ADVENTURE"
+        bannerImage={aboutBannerImage}
+      />
 
       {eventPageData?.slice(0, 1).map((eventsData) => (
         <EventPageBody
@@ -20,8 +25,6 @@ const AboutPage = () => {
         />
       ))}
 
-      <ExploreSectionComponent />
-
       {eventPageData?.slice(1, 2).map((eventsData) => (
         <EventPageBody
           title={eventsData.title}
@@ -30,6 +33,7 @@ const AboutPage = () => {
           key={eventsData.id}
         />
       ))}
+      <ExploreSectionComponent />
 
       {eventPageData?.slice(2, 3).map((eventsData) => (
         <EventPageBody
@@ -44,25 +48,6 @@ const AboutPage = () => {
 };
 
 export default AboutPage;
-interface IMainPageBanner {
-  pageName: string;
-  pageSlug: string;
-}
-const MainPageBanner = ({ pageName, pageSlug }: IMainPageBanner) => {
-  return (
-    <>
-      <div className="relative">
-        <div className="absolute top-4 left-4">
-          <h1 className="text-9xl text-white font-extrabold"> {pageName} </h1>
-        </div>
-        <Image src={aboutBannerImage} className="" alt="about_" />
-        <div className="absolute bottom-4 right-4">
-          <h2 className="text-3xl text-white font-extrabold"> {pageSlug} </h2>
-        </div>
-      </div>
-    </>
-  );
-};
 
 interface IEventPageBody {
   key: number;

@@ -63,8 +63,8 @@ const NavBar = () => {
           </div>
 
           {openFirst && (
-            <div className="relative bg-white p-10">
-              <div className="max-w-screen-2xl px-10 mx-auto flex items-center justify-between">
+            <div className="relative bg-white">
+              <div className="max-w-screen-2xl py-5 px-10 mx-auto flex items-center justify-between">
                 <div className="flex justify-center">
                   {shopNav?.slice(0, 3).map((pillLink) => (
                     <div key={pillLink.id}>
@@ -102,7 +102,7 @@ const NavBar = () => {
             </div>
           )}
           {openSecond && (
-            <div className="max-w-screen-2xl mx-auto px-10">
+            <div className="max-w-screen-2xl mx-auto px-10 py-5">
               <div className="grid grid-cols-3 gap-4">
                 {exploreNav?.map((explore) => (
                   <div key={explore.id} className="">

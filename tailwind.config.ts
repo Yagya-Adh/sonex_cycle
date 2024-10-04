@@ -22,6 +22,7 @@ const config: Config = {
           borderCol: "#0000001a",
           blackBackGroundCol: "#0009",
           footerFormBackGround: "#3256d5",
+          mutedtText: "#0009",
         },
 
         // Barlow Condensed, sans-serif
