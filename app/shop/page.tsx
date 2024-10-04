@@ -1,7 +1,7 @@
 "use client";
 
-const page = () => {
+const ShopPage = () => {
   return <>SHOP</>;
 };
 
-export default page;
+export default ShopPage;

@@ -1,6 +1,6 @@
 "use client";
-const page = () => {
+const ExplorePage = () => {
   return <>EXPLORE</>;
 };
 
-export default page;
+export default ExplorePage;
