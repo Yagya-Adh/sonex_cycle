@@ -1,17 +1,13 @@
 "use client";
-import SectionHead from "./components/section/SectionHead";
-import Card from "./components/card/Card";
-import MainBanner from "./components/banner/MainBanner";
-import cycleC from "./assets/advertisehomeCycle.webp";
-import ImageCard from "./components/card/ImageCard";
-import downHill from "./assets/explore/downhill.webp";
-import brakeParts from "./assets/explore/brakepart.webp";
-import gearImage from "./assets/explore/gear.webp";
-import outLetImage from "./assets/explore/outlet.webp";
-import serveiceImage from "./assets/explore/services.webp";
-import blogImage from "./assets/explore/blog.webp";
-import eventImage from "./assets/explore/events.webp";
-import ExploreSectionComponent from "./components/explore/ExploreSectionComponent";
+import SectionHead from "../section/SectionHead";
+import ImageCard from "../card/ImageCard";
+import downHill from "../../assets/explore/downhill.webp";
+import brakeParts from "../../assets/explore/brakepart.webp";
+import gearImage from "../../assets/explore/gear.webp";
+import outLetImage from "../../assets/explore/outlet.webp";
+import serveiceImage from "../../assets/explore/services.webp";
+import blogImage from "../../assets/explore/blog.webp";
+import eventImage from "../../assets/explore/events.webp";
 
 const data = [
   {
@@ -88,36 +84,39 @@ const exploreData = [
   { id: 6, exploreImage: blogImage, name: "BLOG" },
   { id: 7, exploreImage: eventImage, name: "EVENTS" },
 ];
-
-export default function Home() {
+const ExploreSectionComponent = () => {
   return (
     <>
-      <MainBanner />
-      <SectionHead
-        sectionName="NEW ARRIVALS"
-        linkName="Shop all"
-        linkTextColor="text-rose-600"
-      />
-      <div className="max-w-screen-2xl mx-auto ">
-        <div className="grid gird-cols-1 md:grid-cols-3">
-          {data?.map((sonnex) => (
-            <div key={sonnex.id}>
-              <Card
-                width={sonnex.title}
-                backgroundColor={sonnex.title}
-                cycle={cycleC}
-                typeCycle={sonnex.type}
-                title={sonnex.title}
-                price={sonnex.price}
-                actualPrice={sonnex.actualPrice}
-                New={sonnex.new}
-                Sale={sonnex.sale}
-              />
-            </div>
-          ))}
+      <div className="py-10">
+        <SectionHead sectionName="EXPLORE" />
+        <div className="max-w-screen-2xl mx-auto mb-5">
+          <div className="grid gird-cols-1 md:grid-cols-4 gap-4">
+            {exploreData?.slice(0, 4).map((sonnex) => (
+              <div key={sonnex.id}>
+                <ImageCard
+                  contentName={sonnex.name}
+                  cycleImage={sonnex.exploreImage}
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="max-w-screen-2xl mx-auto ">
+          <div className="grid gird-cols-1 md:grid-cols-3 gap-4">
+            {exploreData?.slice(4, 8).map((sonnex) => (
+              <div key={sonnex.id}>
+                <ImageCard
+                  contentName={sonnex.name}
+                  cycleImage={sonnex.exploreImage}
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
-      <ExploreSectionComponent />
     </>
   );
-}
+};
+
+export default ExploreSectionComponent;
