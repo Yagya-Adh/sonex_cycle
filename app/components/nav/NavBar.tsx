@@ -1,11 +1,16 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
-// import Link from "next/link";
 import sonexLogo from "../../assets/SONNEX.svg";
 import { ShoppingBagIcon } from "@heroicons/react/24/outline";
 import { PlusIcon } from "@heroicons/react/16/solid";
 import ToggleButton from "../button/ToggleButton";
+import Link from "next/link";
+import PillButton from "../button/PillButton";
+import exploreRoutes from "../../../exploreRoute.json";
+import shopRoutes from "../../../shopRoutes.json";
+const shopNav = shopRoutes;
+const exploreNav = exploreRoutes;
 
 const NavBar = () => {
   const [openFirst, setOpenFirst] = useState(false);
@@ -24,7 +29,9 @@ const NavBar = () => {
           <div className=" flex items-center justify-between  ">
             <div className="flex items-center justify-between">
               <ToggleButton />
-              <Image src={sonexLogo} className="" alt="sonex_" />
+              <Link href={"/"}>
+                <Image src={sonexLogo} className="" alt="sonex_" />
+              </Link>
             </div>
             <ul className="flex items-center font-sans px-6 font-sonexFamily tracking-tighter ms-5  justify-between p-1">
               <button
@@ -53,67 +60,63 @@ const NavBar = () => {
             </div>
           </div>
         </div>
+        <div className="relative bg-white p-10">
+          {openFirst && (
+            <div className="max-w-screen-2xl px-10 mx-auto flex items-center justify-between">
+              <div className="flex justify-center">
+                {shopNav?.slice(0, 3).map((pillLink) => (
+                  <div key={pillLink.id}>
+                    <PillButton
+                      padding="px-2 py-1"
+                      text={pillLink.name}
+                      variant="dark"
+                    />
+                    <ul className="pb-2">
+                      {pillLink.innerRoute?.map((inLink) => (
+                        <li key={inLink.id} className="p-1">
+                          <PillButton
+                            text={inLink.name}
+                            padding="px-2"
+                            variant="primary"
+                          />
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+              <div className="flex flex-col justify-center">
+                {shopNav?.slice(3, 6).map((bigNav) => (
+                  <div key={bigNav.id} className="py-2">
+                    <PillButton
+                      text={bigNav.name}
+                      padding="font-extrabold text-7xl py-10"
+                      variant="primary-outline-focus"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+          {openSecond && (
+            <div className="max-w-screen-2xl mx-auto px-10">
+              <div className="grid grid-cols-3 gap-4">
+                {exploreNav?.map((explore) => (
+                  <div key={explore.id} className="">
+                    <PillButton
+                      text={explore.name}
+                      padding="font-extrabold text-7xl py-10 px-4 items-center"
+                      variant="primary-outline-focus"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
       </nav>
-
-      <div className="relative">{}</div>
     </>
   );
 };
 
 export default NavBar;
-/* <li>
-          <Bars3Icon className="text-rose-600 size-8" />
-          <XMarkIcon className="text-rose-600 size-8" />
-        
-          <MinusIcon className="text-black size-8" />
-        </li> */
-/* 
-const shopNav = [
-  {
-    id: 1,
-    name: "BIKE",
-    innerRoute: [
-      { id: 1, name: "City" },
-      { id: 2, name: "Electric" },
-      { id: 3, name: "Gravel" },
-      { id: 4, name: "Kids" },
-      { id: 5, name: "Mountain" },
-      { id: 6, name: "Road" },
-    ],
-  },
-  {
-    id: 2,
-    name: "PARTS",
-    innerRoute: [
-      { id: 1, name: "Pedals" },
-      { id: 2, name: "Saddles" },
-      { id: 3, name: "Stems" },
-      { id: 4, name: "Suspension" },
-      { id: 5, name: "Tires" },
-      { id: 6, name: "Wheels" },
-    ],
-  },
-  {
-    id: 3,
-    name: "GEAR",
-    innerRoute: [
-      { id: 1, name: "Accessories" },
-      { id: 2, name: "Bibshorts" },
-      { id: 3, name: "Gloves" },
-      { id: 4, name: "Helmets" },
-      { id: 5, name: "Jerseys" },
-      { id: 6, name: "Shoes" },
-      { id: 7, name: "Tech" },
-    ],
-  },
-
-  {
-    id: 4,
-    name: "SHOP ALL",
-  },
-  {
-    id: 5,
-    name: "BRANDS",
-  },
-];
- */

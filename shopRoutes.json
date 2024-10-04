@@ -38,28 +38,10 @@
   },
   {
     "id": 4,
-    "name": "SHOP ALL",
-    "innerRoute": [
-      { "id": 1, "name": "Accessories" },
-      { "id": 2, "name": "Bibshorts" },
-      { "id": 3, "name": "Gloves" },
-      { "id": 4, "name": "Helmets" },
-      { "id": 5, "name": "Jerseys" },
-      { "id": 6, "name": "Shoes" },
-      { "id": 7, "name": "Tech" }
-    ]
+    "name": "SHOP ALL"
   },
   {
     "id": 5,
-    "name": "BRANDS",
-    "innerRoute": [
-      { "id": 1, "name": "Accessories" },
-      { "id": 2, "name": "Bibshorts" },
-      { "id": 3, "name": "Gloves" },
-      { "id": 4, "name": "Helmets" },
-      { "id": 5, "name": "Jerseys" },
-      { "id": 6, "name": "Shoes" },
-      { "id": 7, "name": "Tech" }
-    ]
+    "name": "BRANDS"
   }
 ]
