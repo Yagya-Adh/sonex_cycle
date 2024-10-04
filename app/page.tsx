@@ -3,14 +3,6 @@ import SectionHead from "./components/section/SectionHead";
 import Card from "./components/card/Card";
 import MainBanner from "./components/banner/MainBanner";
 import cycleC from "./assets/advertisehomeCycle.webp";
-import ImageCard from "./components/card/ImageCard";
-import downHill from "./assets/explore/downhill.webp";
-import brakeParts from "./assets/explore/brakepart.webp";
-import gearImage from "./assets/explore/gear.webp";
-import outLetImage from "./assets/explore/outlet.webp";
-import serveiceImage from "./assets/explore/services.webp";
-import blogImage from "./assets/explore/blog.webp";
-import eventImage from "./assets/explore/events.webp";
 import ExploreSectionComponent from "./components/explore/ExploreSectionComponent";
 
 const data = [
@@ -77,16 +69,6 @@ const data = [
     new: "New",
     sale: "",
   },
-];
-
-const exploreData = [
-  { id: 1, exploreImage: downHill, name: "BIKE" },
-  { id: 2, exploreImage: brakeParts, name: "PARKS" },
-  { id: 3, exploreImage: gearImage, name: "GEAR" },
-  { id: 4, exploreImage: outLetImage, name: "OUTLET" },
-  { id: 5, exploreImage: serveiceImage, name: "SERVICES" },
-  { id: 6, exploreImage: blogImage, name: "BLOG" },
-  { id: 7, exploreImage: eventImage, name: "EVENTS" },
 ];
 
 export default function Home() {

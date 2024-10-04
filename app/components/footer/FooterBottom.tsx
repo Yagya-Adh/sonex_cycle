@@ -36,11 +36,11 @@ const GridOneCalendar = () => {
     <div className="flex items-center justify-center  ">
       <div className="flex-col flex items-center p-2">
         <h1 className="font-bold text-xl">Mon-Fri </h1>
-        <span>10am - 7pm</span>
+        <span>10am &#45; 7pm</span>
       </div>
       <div className="border-l border-stone-200 flex-col flex items-center p-2">
         <h2 className="font-bold text-xl">Saturday</h2>
-        <span>10am - 2pm</span>
+        <span>10am &#45; 2pm</span>
       </div>
     </div>
   );
@@ -67,7 +67,7 @@ const ColOne = () => {
     <div className="flex flex-col">
       <h1 className="font-sonexFamily font-bold text-3xl py-2">VISIT US</h1>
       <p className="flex items-end max-w-16">
-        Kingdom Park, 80 4910 Lenzerheide
+        Kingdom Park&#44; 80 4910 Lenzerheide
         <Image src={switcherland} alt="switchzer_" className="size-3" />
       </p>
       <span className="text-3xl underline py-1 ">Get direction</span>

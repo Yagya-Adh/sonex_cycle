@@ -6,7 +6,7 @@ import exploreTextData from "../../explorePageTextData.json";
 
 const eventPageData = exploreTextData;
 
-const page = () => {
+const AboutPage = () => {
   return (
     <div className="max-w-screen-2xl mx-auto ">
       <MainPageBanner pageName="ABOUT" pageSlug="NEXT STEP: ADVENTURE " />
@@ -43,7 +43,7 @@ const page = () => {
   );
 };
 
-export default page;
+export default AboutPage;
 interface IMainPageBanner {
   pageName: string;
   pageSlug: string;

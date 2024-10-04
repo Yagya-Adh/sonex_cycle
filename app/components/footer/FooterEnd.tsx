@@ -1,14 +1,11 @@
 "use client";
-
-import exp from "constants";
-
 const FooterEnd = () => {
   return (
     <div className="bg-black text-white">
       <div className="max-w-screen-2xl mx-auto">
         <div className="flex justify-between flex-row items-center">
           <h1 className="text-sm max-w-screen-2xl w-full">
-            © Sonnex 2024. All rights reserved.
+            &copy; Sonnex 2024&#46; All rights reserved&#46;
           </h1>
 
           <div className="flex items-center justify-end w-full py-4 ">

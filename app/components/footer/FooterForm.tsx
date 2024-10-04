@@ -30,7 +30,7 @@ const FooterFormHead = () => {
         </h1>
         <p className="max-w-72">
           Get informed about the best events and special offers only our
-          subscribers have.
+          subscribers have &#46;
         </p>
       </div>
       <ArrowDownIcon className="size-6 text-white" />

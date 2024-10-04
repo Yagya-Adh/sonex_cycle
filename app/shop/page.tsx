@@ -1,16 +1,7 @@
 "use client";
 
-import Footer from "../components/footer/Footer";
-import NavBar from "../components/nav/NavBar";
-
-const page = () => {
-  return (
-    <>
-      <NavBar />
-      SHOP
-      <Footer />
-    </>
-  );
+const ShopPage = () => {
+  return <>SHOP</>;
 };
 
-export default page;
+export default ShopPage;
