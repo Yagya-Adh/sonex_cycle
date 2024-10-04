@@ -1,15 +1,7 @@
 "use client";
-
 import Footer from "../components/footer/Footer";
-import NavBar from "../components/nav/NavBar";
-
 const page = () => {
-  return (
-    <>
-      EXPLORE
-      <Footer />
-    </>
-  );
+  return <>EXPLORE</>;
 };
 
 export default page;

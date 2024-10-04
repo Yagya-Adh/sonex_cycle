@@ -3,7 +3,6 @@ import SectionHead from "./components/section/SectionHead";
 import Card from "./components/card/Card";
 import MainBanner from "./components/banner/MainBanner";
 import cycleC from "./assets/advertisehomeCycle.webp";
-import ImageCard from "./components/card/ImageCard";
 import downHill from "./assets/explore/downhill.webp";
 import brakeParts from "./assets/explore/brakepart.webp";
 import gearImage from "./assets/explore/gear.webp";

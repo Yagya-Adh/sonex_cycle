@@ -1,7 +1,4 @@
 "use client";
-
-import exp from "constants";
-
 const FooterEnd = () => {
   return (
     <div className="bg-black text-white">
