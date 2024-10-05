@@ -7,7 +7,7 @@ const MainBanner = () => {
   return (
     <div className="relative mx-auto max-w-screen-2xl">
       <div className="absolute top-0">
-        <h1 className="text-white text-8xl font-extrabold max-w-screen-sm font-sonexFamily p-10">
+        <h1 className="text-white text-8xl font-extrabold max-w-screen-sm font-barlow p-10">
           RISE WITH THE RIDING &#46;
         </h1>
       </div>
@@ -21,7 +21,7 @@ const BannerFootSection = () => {
   return (
     <div className="flex flex-col items-end w-full absolute bottom-0">
       <div className="flex justify-between items-end px-10">
-        <p className="text-white text-3xl font-bold max-w-screen-sm pe-40">
+        <p className="text-white text-3xl font-bold max-w-screen-sm pe-40 font-barlow">
           YOUR SHOP FOR BICYCLES AND E&#45;BIKES IN SWITZERLAND &#46;
         </p>
         <Card

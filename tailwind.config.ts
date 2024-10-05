@@ -8,7 +8,11 @@ const config: Config = {
   ],
   theme: {
     fontFamily: {
-      sonexFamily: ["Barlow Condensed", "sans-serif"],
+      inter: "var(--font-inter)",
+      "source-sans": "var(--font-source-sans)",
+      "source-serif": "var(--font-source-serif)",
+      sans: "Inter, sans-serif",
+      barlow: "Barlow Condensed, sans",
     },
     extend: {
       colors: {

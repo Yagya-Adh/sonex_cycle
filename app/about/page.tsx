@@ -8,7 +8,7 @@ const eventPageData = exploreTextData;
 
 const AboutPage = () => {
   return (
-    <div className="max-w-screen-2xl mx-auto ">
+    <div className="max-w-screen-2xl mx-auto">
       <MainImageBanner
         pageName="ABOUT"
         pageSlug="NEXT STEP: ADVENTURE"

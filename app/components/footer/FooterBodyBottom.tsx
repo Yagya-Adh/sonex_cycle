@@ -5,6 +5,7 @@ import Image, { StaticImageData } from "next/image";
 import PillButton from "../button/PillButton";
 import callUs from "../../assets/footer/call.svg";
 import emailUs from "../../assets/footer/email.svg";
+import { ArrowUpIcon } from "@heroicons/react/16/solid";
 interface IGridTwoData {
   id: number;
   icon: StaticImageData;
@@ -20,7 +21,7 @@ const GridTwoData: IGridTwoData[] = [
     slug: "We usually reply within 48 hours",
   },
 ];
-export const FooterBottom = () => {
+const FooterBodyBottom = () => {
   return (
     <div className="bg-black text-white">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-screen-2xl mx-auto px-10 ">
@@ -30,6 +31,7 @@ export const FooterBottom = () => {
     </div>
   );
 };
+export default FooterBodyBottom;
 
 const GridOneCalendar = () => {
   return (
@@ -66,11 +68,13 @@ const ColOne = () => {
   return (
     <div className="flex flex-col">
       <h1 className="font-sonexFamily font-bold text-3xl py-2">VISIT US</h1>
-      <p className="flex items-end max-w-16">
+      <p className="flex items-end max-w-16 text-stone-500">
         Kingdom Park&#44; 80 4910 Lenzerheide
         <Image src={switcherland} alt="switchzer_" className="size-3" />
       </p>
-      <span className="text-3xl underline py-1 ">Get direction</span>
+      <span className="text-2xl border-b  w-2/4 py-1 items-center flex ">
+        Get direction <ArrowUpIcon className="rotate-45 size-6 " />{" "}
+      </span>
     </div>
   );
 };

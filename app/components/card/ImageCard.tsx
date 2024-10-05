@@ -5,11 +5,13 @@ import PillButton from "../button/PillButton";
 interface IloadImageCard {
   cycleImage: StaticImageData;
   contentName: string;
+  bordering?: string;
 }
-const ImageCard = ({ cycleImage, contentName }: IloadImageCard) => {
+const ImageCard = ({ cycleImage, contentName, bordering }: IloadImageCard) => {
   return (
     <div
-      className={`"rounded-sm border hover:bg-sonex-cartBackGround overflow-hidden relative"`}
+      className={`"rounded-sm hover:bg-sonex-cartBackGround overflow-hidden relative" 
+        ${bordering ? bordering : ""} `}
     >
       <div className="relative">
         <Image
