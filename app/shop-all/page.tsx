@@ -1,13 +1,4 @@
 "use client";
-// import { StaticImageData } from "next/image";
-// import ImageCard from "../components/card/ImageCard";
-// import mountaine from "../assets/blog/routes.webp";
-// import charm from "../assets/blog/specializedS-Work.webp";
-// import specializeSwork from "../assets/blog/howto_mountain.webp";
-// import verbier from "../assets/blog/verbier.webp";
-// import citybike from "../assets/blog/cityBike.webp";
-// import specialize from "../assets/blog/underStandindTrackCycle.webp";
-// import undertack from "../assets/blog/underStandingtrack.webp";
 import CustomLists from "../components/list/CustomLists";
 import SectionHead from "../components/section/SectionHead";
 import PriceCard from "../components/card/PriceCard";
@@ -92,36 +83,26 @@ const filterRoutes: IfilterRoutes[] = [
   },
   {
     id: 2,
-    path: "Bike 101",
+    path: "Bikes",
     isActive: false,
   },
   {
     id: 3,
-    path: "News",
+    path: "Gear",
     isActive: false,
   },
   {
     id: 4,
-    path: "Reviews",
-    isActive: false,
-  },
-  {
-    id: 5,
-    path: "Routes",
-    isActive: false,
-  },
-  {
-    id: 6,
-    path: "Tips & Advices",
+    path: "Parts",
     isActive: false,
   },
 ];
 
-const GearPage = () => {
+const ShopAllPage = () => {
   return (
     <>
       <div className="max-w-screen-2xl mx-auto">
-        <SectionHead sectionName="GEAR" />
+        <SectionHead sectionName="PRODUCTS" />
 
         <div className="flex py-4 border-t border-b">
           {filterRoutes?.map((route) => (
@@ -155,4 +136,4 @@ const GearPage = () => {
   );
 };
 
-export default GearPage;
+export default ShopAllPage;
