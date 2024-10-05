@@ -1,3 +1,4 @@
+"use client";
 import MainImageBanner from "../components/banner/MainImageBanner";
 import eventBannerImage from "../assets/event/eventsimage.webp";
 import CustomLists from "../components/list/CustomLists";
@@ -15,7 +16,6 @@ const ServicesPage = () => {
     </>
   );
 };
-
 export default ServicesPage;
 
 const data = [

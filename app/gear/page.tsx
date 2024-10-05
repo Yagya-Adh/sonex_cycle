@@ -1,13 +1,4 @@
 "use client";
-// import { StaticImageData } from "next/image";
-// import ImageCard from "../components/card/ImageCard";
-// import mountaine from "../assets/blog/routes.webp";
-// import charm from "../assets/blog/specializedS-Work.webp";
-// import specializeSwork from "../assets/blog/howto_mountain.webp";
-// import verbier from "../assets/blog/verbier.webp";
-// import citybike from "../assets/blog/cityBike.webp";
-// import specialize from "../assets/blog/underStandindTrackCycle.webp";
-// import undertack from "../assets/blog/underStandingtrack.webp";
 import CustomLists from "../components/list/CustomLists";
 import SectionHead from "../components/section/SectionHead";
 import PriceCard from "../components/card/PriceCard";
@@ -84,6 +75,7 @@ interface IfilterRoutes {
   path: string;
   isActive: boolean;
 }
+
 const filterRoutes: IfilterRoutes[] = [
   {
     id: 1,
@@ -92,27 +84,37 @@ const filterRoutes: IfilterRoutes[] = [
   },
   {
     id: 2,
-    path: "Bike 101",
+    path: "Accessories",
     isActive: false,
   },
   {
     id: 3,
-    path: "News",
+    path: "Bibshorts",
     isActive: false,
   },
   {
     id: 4,
-    path: "Reviews",
+    path: "Gloves",
     isActive: false,
   },
   {
     id: 5,
-    path: "Routes",
+    path: "Helmets",
     isActive: false,
   },
   {
     id: 6,
-    path: "Tips & Advices",
+    path: "Jerseys",
+    isActive: false,
+  },
+  {
+    id: 7,
+    path: "Shoes",
+    isActive: false,
+  },
+  {
+    id: 8,
+    path: "Tech",
     isActive: false,
   },
 ];

@@ -1,13 +1,4 @@
 "use client";
-// import { StaticImageData } from "next/image";
-// import ImageCard from "../components/card/ImageCard";
-// import mountaine from "../assets/blog/routes.webp";
-// import charm from "../assets/blog/specializedS-Work.webp";
-// import specializeSwork from "../assets/blog/howto_mountain.webp";
-// import verbier from "../assets/blog/verbier.webp";
-// import citybike from "../assets/blog/cityBike.webp";
-// import specialize from "../assets/blog/underStandindTrackCycle.webp";
-// import undertack from "../assets/blog/underStandingtrack.webp";
 import CustomLists from "../components/list/CustomLists";
 import SectionHead from "../components/section/SectionHead";
 import PriceCard from "../components/card/PriceCard";
@@ -79,12 +70,12 @@ const data = [
   },
 ];
 
-interface IroutesINBlog {
+interface IfilterRoutes {
   id: number;
   path: string;
   isActive: boolean;
 }
-const routesINBlog: IroutesINBlog[] = [
+const filterRoutes: IfilterRoutes[] = [
   {
     id: 1,
     path: "All",
@@ -92,27 +83,32 @@ const routesINBlog: IroutesINBlog[] = [
   },
   {
     id: 2,
-    path: "Bike 101",
+    path: "Pedals",
     isActive: false,
   },
   {
     id: 3,
-    path: "News",
+    path: "Saddles",
     isActive: false,
   },
   {
     id: 4,
-    path: "Reviews",
+    path: "Stems",
     isActive: false,
   },
   {
     id: 5,
-    path: "Routes",
+    path: "Suspension",
     isActive: false,
   },
   {
     id: 6,
-    path: "Tips & Advices",
+    path: "Tires",
+    isActive: false,
+  },
+  {
+    id: 7,
+    path: "Wheels",
     isActive: false,
   },
 ];
@@ -124,7 +120,7 @@ const PartsPage = () => {
         <SectionHead sectionName="PARTS" />
 
         <div className="flex py-4 border-t border-b">
-          {routesINBlog?.map((route) => (
+          {filterRoutes?.map((route) => (
             <CustomLists
               key={route.id}
               text={route.path}

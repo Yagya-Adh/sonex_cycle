@@ -99,12 +99,12 @@ const data: IBlogData[] = [
     postDate: "Mar 4, 2024",
   },
 ];
-interface IroutesINBlog {
+interface IfilterRoutes {
   id: number;
   path: string;
   isActive: boolean;
 }
-const routesINBlog: IroutesINBlog[] = [
+const filterRoutes: IfilterRoutes[] = [
   {
     id: 1,
     path: "All",
@@ -146,7 +146,7 @@ const BlogPage = () => {
         </div>
 
         <div className="flex py-4 border-t border-b">
-          {routesINBlog?.map((route) => (
+          {filterRoutes?.map((route) => (
             <CustomLists
               key={route.id}
               text={route.path}
