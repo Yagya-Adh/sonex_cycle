@@ -1,6 +1,6 @@
-import React from "react";
 import MainImageBanner from "../components/banner/MainImageBanner";
 import eventBannerImage from "../assets/event/eventsimage.webp";
+import CustomLists from "../components/list/CustomLists";
 const ServicesPage = () => {
   return (
     <>
@@ -74,22 +74,25 @@ const EventCardLists = () => {
         >
           <div className="flex flex-col ">
             <div className="flex justify-between items-center">
-              <div className="flex justify-evenly items-center">
+              <div className="flex justify-between items-center py-5">
                 {listEvent.columnFirst?.map((firstColum) => (
-                  <ul className="text-sonex-mutedtText" key={firstColum.id}>
+                  <ul
+                    className="text-sonex-mutedtText font-inter"
+                    key={firstColum.id}
+                  >
                     <li>{firstColum.date}</li>
                     <li>{firstColum.location}</li>
                     <li>{firstColum.address}</li>
                     <li>{firstColum.country}</li>
                   </ul>
                 ))}
-                <div className="flex flex-col justify-center p-10">
-                  <h1 className="text-4xl font-bold p-4">
+                <div className="flex flex-col justify-center p-5">
+                  <h1 className="text-4xl font-bold py-4">
                     {listEvent.eventTitle}
                   </h1>
                   <div className="flex">
                     {listEvent.columnSecond?.map((secondColumn, index) => (
-                      <CustomPillLists text={secondColumn} key={index} />
+                      <CustomLists text={secondColumn} key={index} />
                     ))}
                   </div>
                 </div>
@@ -101,21 +104,6 @@ const EventCardLists = () => {
           </div>
         </div>
       ))}
-    </>
-  );
-};
-
-type textIN = {
-  text: string;
-  key: number;
-};
-
-const CustomPillLists = ({ text, key }: textIN) => {
-  return (
-    <>
-      <h1 className="rounded-full px-2 py-1 text-2xl border mx-1" key={key}>
-        {text}
-      </h1>
     </>
   );
 };

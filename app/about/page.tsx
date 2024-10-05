@@ -1,5 +1,4 @@
 "use client";
-import Image, { StaticImageData } from "next/image";
 import aboutBannerImage from "../assets/about/about.webp";
 import ExploreSectionComponent from "../components/explore/ExploreSectionComponent";
 import exploreTextData from "../../explorePageTextData.json";
@@ -9,7 +8,7 @@ const eventPageData = exploreTextData;
 
 const AboutPage = () => {
   return (
-    <div className="max-w-screen-2xl mx-auto ">
+    <div className="max-w-screen-2xl mx-auto">
       <MainImageBanner
         pageName="ABOUT"
         pageSlug="NEXT STEP: ADVENTURE"
@@ -67,7 +66,6 @@ const EventPageBody = ({
         <div className="py-40 w-2/3 ">
           <h1 className="text-7xl font-sonexFamily font-extrabold">{title}</h1>
           <p className="text-4xl font-snas py-4">{descrition}</p>
-
           <p className="text-4xl font-snas">{descritionOne}</p>
         </div>
       </div>

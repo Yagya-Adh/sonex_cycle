@@ -1,9 +1,8 @@
 "use client";
-import SectionHead from "./components/section/SectionHead";
-import PriceCard from "./components/card/PriceCard";
-import MainBanner from "./components/banner/MainBanner";
-import cycleC from "./assets/advertisehomeCycle.webp";
-import ExploreSectionComponent from "./components/explore/ExploreSectionComponent";
+import CustomLists from "../components/list/CustomLists";
+import SectionHead from "../components/section/SectionHead";
+import PriceCard from "../components/card/PriceCard";
+import cycleC from "../assets/advertisehomeCycle.webp";
 
 const data = [
   {
@@ -71,16 +70,50 @@ const data = [
   },
 ];
 
-export default function Home() {
+interface IfilterRoutes {
+  id: number;
+  path: string;
+  isActive: boolean;
+}
+const filterRoutes: IfilterRoutes[] = [
+  {
+    id: 1,
+    path: "All",
+    isActive: true,
+  },
+  {
+    id: 2,
+    path: "Bikes",
+    isActive: false,
+  },
+  {
+    id: 3,
+    path: "Gear",
+    isActive: false,
+  },
+  {
+    id: 4,
+    path: "Parts",
+    isActive: false,
+  },
+];
+
+const ShopAllPage = () => {
   return (
     <>
-      <MainBanner />
-      <SectionHead
-        sectionName="NEW ARRIVALS"
-        linkName="Shop all"
-        linkTextColor="text-rose-600"
-      />
-      <div className="max-w-screen-2xl mx-auto ">
+      <div className="max-w-screen-2xl mx-auto">
+        <SectionHead sectionName="PRODUCTS" />
+
+        <div className="flex py-4 border-t border-b">
+          {filterRoutes?.map((route) => (
+            <CustomLists
+              key={route.id}
+              text={route.path}
+              isActive={route.isActive}
+              fontSize="text-sm"
+            />
+          ))}
+        </div>
         <div className="grid gird-cols-1 md:grid-cols-3">
           {data?.map((sonnex) => (
             <div key={sonnex.id}>
@@ -99,7 +132,8 @@ export default function Home() {
           ))}
         </div>
       </div>
-      <ExploreSectionComponent />
     </>
   );
-}
+};
+
+export default ShopAllPage;

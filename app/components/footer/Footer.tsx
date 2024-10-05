@@ -1,7 +1,7 @@
 "use client";
 import FooterForm from "./FooterForm";
 import FooterBody from "./FooterBody";
-import { FooterBottom } from "./FooterBottom";
+import FooterBodyBottom from "./FooterBodyBottom";
 import FooterEnd from "./FooterEnd";
 
 const Footer = () => {
@@ -10,7 +10,7 @@ const Footer = () => {
       <footer>
         <FooterForm />
         <FooterBody />
-        <FooterBottom />
+        <FooterBodyBottom />
         <FooterEnd />
       </footer>
     </>
