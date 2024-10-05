@@ -1,9 +1,17 @@
 "use client";
-import SectionHead from "./components/section/SectionHead";
-import PriceCard from "./components/card/PriceCard";
-import MainBanner from "./components/banner/MainBanner";
-import cycleC from "./assets/advertisehomeCycle.webp";
-import ExploreSectionComponent from "./components/explore/ExploreSectionComponent";
+// import { StaticImageData } from "next/image";
+// import ImageCard from "../components/card/ImageCard";
+// import mountaine from "../assets/blog/routes.webp";
+// import charm from "../assets/blog/specializedS-Work.webp";
+// import specializeSwork from "../assets/blog/howto_mountain.webp";
+// import verbier from "../assets/blog/verbier.webp";
+// import citybike from "../assets/blog/cityBike.webp";
+// import specialize from "../assets/blog/underStandindTrackCycle.webp";
+// import undertack from "../assets/blog/underStandingtrack.webp";
+import CustomLists from "../components/list/CustomLists";
+import SectionHead from "../components/section/SectionHead";
+import PriceCard from "../components/card/PriceCard";
+import cycleC from "../assets/advertisehomeCycle.webp";
 
 const data = [
   {
@@ -71,16 +79,60 @@ const data = [
   },
 ];
 
-export default function Home() {
+interface IroutesINBlog {
+  id: number;
+  path: string;
+  isActive: boolean;
+}
+const routesINBlog: IroutesINBlog[] = [
+  {
+    id: 1,
+    path: "All",
+    isActive: true,
+  },
+  {
+    id: 2,
+    path: "Bike 101",
+    isActive: false,
+  },
+  {
+    id: 3,
+    path: "News",
+    isActive: false,
+  },
+  {
+    id: 4,
+    path: "Reviews",
+    isActive: false,
+  },
+  {
+    id: 5,
+    path: "Routes",
+    isActive: false,
+  },
+  {
+    id: 6,
+    path: "Tips & Advices",
+    isActive: false,
+  },
+];
+
+const BikePage = () => {
   return (
     <>
-      <MainBanner />
-      <SectionHead
-        sectionName="NEW ARRIVALS"
-        linkName="Shop all"
-        linkTextColor="text-rose-600"
-      />
-      <div className="max-w-screen-2xl mx-auto ">
+      <div className="max-w-screen-2xl mx-auto">
+        <SectionHead sectionName="BIKE" />
+
+        <div className="flex py-4 border-t border-b">
+          {routesINBlog?.map((route) => (
+            <CustomLists
+              key={route.id}
+              text={route.path}
+              isActive={route.isActive}
+              fontSize="text-sm"
+            />
+          ))}
+        </div>
         <div className="grid gird-cols-1 md:grid-cols-3">
           {data?.map((sonnex) => (
             <div key={sonnex.id}>
@@ -99,7 +151,8 @@ export default function Home() {
           ))}
         </div>
       </div>
-      <ExploreSectionComponent />
     </>
   );
-}
+};
+
+export default BikePage;

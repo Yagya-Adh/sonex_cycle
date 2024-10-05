@@ -11,7 +11,7 @@ const CustomLists = ({ text, key, isActive, fontSize }: textIN) => {
   return (
     <>
       <h1
-        className={`rounded-full px-2 py-1 text-2xl border mx-1 hover:bg-sonex-cartBackGround
+        className={`rounded-full px-2 py-1 font-bold border mx-1 hover:bg-sonex-cartBackGround
           ${isActive ? "bg-black text-white " : ""}
           ${fontSize ? fontSize : ""}
           `}

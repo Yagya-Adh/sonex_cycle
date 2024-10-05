@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Card from "../card/Card";
+import PriceCard from "../card/PriceCard";
 import MarqueeComponent from "../marquee/MarqueeComponent";
 import MAINBANNERIMAGE from "../../assets/home.webp";
 import AVDERTISECYCLE from "../../assets/advertisehomeCycle.webp";
@@ -24,7 +24,7 @@ const BannerFootSection = () => {
         <p className="text-white text-3xl font-bold max-w-screen-sm pe-40 font-barlow">
           YOUR SHOP FOR BICYCLES AND E&#45;BIKES IN SWITZERLAND &#46;
         </p>
-        <Card
+        <PriceCard
           cycle={AVDERTISECYCLE}
           backgroundColor="bg-[white]"
           width="w-1/4"

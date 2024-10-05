@@ -151,7 +151,7 @@ const BlogPage = () => {
               key={route.id}
               text={route.path}
               isActive={route.isActive}
-              fontSize="text-sm"
+              fontSize=""
             />
           ))}
         </div>

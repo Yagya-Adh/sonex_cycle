@@ -10,9 +10,9 @@ const SectionHead = ({
   linkTextColor,
 }: ISectionHead) => {
   return (
-    <div className="max-w-screen-2xl mx-auto py-10">
+    <div className="max-w-screen-2xl mx-auto py-5 ">
       <div className="flex justify-between">
-        <h1 className="text-7xl font-extrabold font-sonexFamily tracking-tighter max-w-20 ">
+        <h1 className="text-8xl py-4 font-extrabold font-sonexFamily tracking-tighter max-w-20 ">
           {sectionName}
         </h1>
 

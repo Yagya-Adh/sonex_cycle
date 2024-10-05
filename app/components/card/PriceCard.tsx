@@ -2,7 +2,7 @@
 import Image, { StaticImageData } from "next/image";
 import PillButton from "../button/PillButton";
 
-interface ICardProp {
+interface IPriceCardProp {
   width?: string;
   backgroundColor?: string;
   cycle: StaticImageData;
@@ -13,7 +13,7 @@ interface ICardProp {
   New?: string;
   Sale?: string;
 }
-const Card = ({
+const PriceCard = ({
   width,
   backgroundColor,
   cycle,
@@ -23,7 +23,7 @@ const Card = ({
   actualPrice,
   New,
   Sale,
-}: ICardProp) => {
+}: IPriceCardProp) => {
   return (
     <div
       className={`"rounded-sm border hover:bg-sonex-cartBackGround overflow-hidden"  ${
@@ -59,4 +59,4 @@ const Card = ({
   );
 };
 
-export default Card;
+export default PriceCard;
